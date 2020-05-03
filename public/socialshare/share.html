@@ -1,0 +1,71 @@
+<script>
+  // Popup window code
+  function openShareWindow(socialUrl) {
+    window.open(
+      socialUrl, 'popUpWindow', 'height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+  }
+</script>
+<style>
+  .floating-share {
+    left: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 0px;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: "Open Sans", Arial, sans-serif;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 144px;
+    width: 60px;
+    z-index: 800;
+    height: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .floating-share .title {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    -ms-transform: -ms-rotate(90deg);
+    transform: rotate(90deg);
+    -ms-transform-origin: 19% 26%;
+    transform-origin: 19% 26%;
+    letter-spacing: 1px;
+  }
+
+  .prft_floating_share__icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px 10px;
+    cursor: pointer;
+    background-color: #d51d29;
+    border-radius: 50%;
+  }
+</style>
+
+<div id="floating-share" class="floating-share ready">
+
+  <div class="title">Share</div>
+
+  <a rel="noopener noreferrer"
+    href="javascript:openShareWindow('https://www.facebook.com/share.php?u=https://toyota.com/TNMA')"
+    area-label="socialShareFacebook">
+    <img class="prft_floating_share__icon" src="./facebook.svg" alt="Facebook">
+  </a>
+
+  <a rel="noopener noreferrer"
+    href="javascript:openShareWindow('https://twitter.com/share?text=Toyota offers a variety of Grants &amp;amp; Gifts. Discover these opportunities with Toyota Motor North America, Inc. Find out more at http://toyota.us/1O5Dxa9&amp;amp;url=false')"
+    area-label="socialShareTwitter">
+    <img class="prft_floating_share__icon" src="./twitter.svg" alt="Twitter">
+  </a>
+
+  <a rel="noopener noreferrer"
+    href="javascript:openShareWindow('https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//www.toyota.com/usa/community/articles/community_grants_tmna.html&amp;title=Toyota%20Motor%20North%20America%2C%20Inc.%20%28TMNA%29&amp;summary=Toyota%20offers%20a%20variety%20of%20Grants%20%26amp%3B%20Gifts.%20Discover%20these%20opportunities%20with%20Toyota%20Motor%20North%20America%2C%20Inc.%20Find%20out%20more%20at%20http%3A//toyota.us/1O5Dxa9')"
+    area-label="socialShareLinkedIn">
+    <img class="prft_floating_share__icon" src="./linkedin.svg" alt="LinkedIn">
+  </a>
+
+</div>
